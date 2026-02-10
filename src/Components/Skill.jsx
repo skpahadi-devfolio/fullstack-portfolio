@@ -1,10 +1,12 @@
 import React from 'react'
-import Skillcard from './skillcard'
+import SkillCard from './SkillCard'
+
+
 
 const Skill = () => {
   return (
     <div className=''>
-      <Skillcard/>
+      <SkillCard/>
     </div>
   )
 }
