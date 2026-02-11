@@ -11,13 +11,13 @@ const Contact = () => {
     e.preventDefault()
 
     try {
-      let a = await fetch('https://fullstack-portfolio-lh6i.onrender.com/api/contact', {method: "POST",
+      let a = await fetch('https://fullstack-portfolio-lh6i.onrender.com/contact', {method: "POST",
         headers: {
         "Content-Type": "application/json",
       },
         body: JSON.stringify(form),
       });
-      let res = await a.text() 
+      let res = await a.json() 
       console.log(res)
     } catch (error) {
       alert("Something is wrong Please Try Again");
