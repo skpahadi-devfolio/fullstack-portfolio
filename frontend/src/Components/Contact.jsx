@@ -11,7 +11,7 @@ const Contact = () => {
     e.preventDefault()
 
     try {
-      let a = await fetch('https://fullstack-portfolio-1h6i.onrender.com//contact', {method: "POST",
+      let a = await fetch('https://fullstack-portfolio-1h6i.onrender.com/contact', {method: "POST",
         headers: {
         "Content-Type": "application/json",
       },
