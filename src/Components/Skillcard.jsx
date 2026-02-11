@@ -1,8 +1,7 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 const SkillCard = () => {
-    const [card, setcard] = useState([
+  const [card, setcard] = useState([
      {
             title: "Frontend",
             skill: ["HTML", "CSS", "Javascript", "TailwindCSS", "React", "Next Js"]
@@ -21,7 +20,7 @@ const SkillCard = () => {
         }
     ])
   return (
-     <div className='flex justify-center gap-5 md:gap-10 flex-wrap md:flex-row md:h-[250px] my-28'>
+   <div className='flex justify-center gap-5 md:gap-10 flex-wrap md:flex-row md:h-[250px] my-28'>
             {card.map(card => {
                 return <div key={card.title} className="flex justify-center items-center hover:-translate-y-8 transition-all hover:duration-700 hover:ease-in-out cursor-pointer">
                     <div className='border-2 text-center w-44 min-h-[120px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex-wrap'>
@@ -37,8 +36,7 @@ const SkillCard = () => {
                     </div>
                 </div>
             })}
-        </div> 
-
+        </div>
   )
 }
 
