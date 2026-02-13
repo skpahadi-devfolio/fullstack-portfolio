@@ -4,7 +4,7 @@ const Home = () => {
   return (
    <>
     <div className='cursor-pointer'>
-      <div className="text-4xl md:text-5xl font-bold fixed top-50 left-4 md:w-full md:left-28 w-1 hover:-translate-y-8 hover:transition-all hover:duration-700 hover:ease-in-out">
+      <div className="text-4xl md:text-6xl font-bold fixed top-50 left-4 md:w-full md:left-28 w-1 hover:-translate-y-8 hover:transition-all hover:duration-700 hover:ease-in-out">
         <h1>Hello</h1>
         <h1>I'm Sandeep Kohli</h1>
       </div>
