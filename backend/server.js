@@ -4,7 +4,8 @@ import conn from "./config/db.js";
 import dotenv from "dotenv";
 import cors from "cors";
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000;
+
 
 dotenv.config();
 app.use(express.json());

@@ -62,7 +62,7 @@ const Contact = () => {
             <input onChange={handleChange} className='px-6 py-2 border-2 border-amber-50 mx-5 rounded-xl' type="text" name='name' value={form.name} placeholder='Your Name' />
             <input onChange={handleChange} className='px-6 py-2 border-2 border-amber-50 mx-5 rounded-xl' type="email" name='email' value={form.email} placeholder='Your Email' />
             <textarea onChange={handleChange} className='px-6 border-2 border-amber-50 mx-5 md:min-h-48 min-h-28 rounded-lg' name="message" value={form.message} placeholder='Enter Message'></textarea>
-            <button className='bg-amber-500 md:px-15 md:py-3 md:w-fit md:mx-25 mx-20 px-20 text-center rounded-4xl'>
+            <button type={submit} className='bg-amber-500 md:px-15 md:py-3 md:w-fit md:mx-25 mx-20 px-20 text-center rounded-4xl'>
               Send Message
             </button>
           </form>

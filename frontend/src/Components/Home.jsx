@@ -4,13 +4,13 @@ const Home = () => {
   return (
    <>
     <div className='cursor-pointer'>
-      <div className="text-4xl md:text-5xl font-bold fixed bottom-96 left-4 md:w-full md:left-28 w-1 hover:-translate-y-8 hover:transition-all hover:duration-700 hover:ease-in-out">
+      <div className="text-4xl md:text-5xl font-bold fixed top-50 left-4 md:w-full md:left-28 w-1 hover:-translate-y-8 hover:transition-all hover:duration-700 hover:ease-in-out">
         <h1>Hello</h1>
         <h1>I'm Sandeep Kohli</h1>
       </div>
 
       {/* image section */}
-      <div className='flex justify-end fixed -right-5 md:top-30 top-60 md:right-32 md:h-2/3 h-56 hover:-translate-y-8 hover:transition-all hover:duration-700 hover:ease-in-out'>
+      <div className='flex justify-end fixed -right-5 md:top-20 top-35 md:right-32 md:h-2/3 h-56 hover:-translate-y-8 hover:transition-all hover:duration-700 hover:ease-in-out'>
         <img src= {myImage} alt="" />
       </div>
       
