@@ -15,7 +15,7 @@ const Home = () => {
       </div>
       
       {/* Short description */}
-      <div className="summary text-2xl w-fit md:w-96 fixed bottom-28 left-4 md:left-28 text-slate-950 hover:-translate-y-3 hover:transition-all hover:duration-1000 hover:ease-in-out">
+      <div className="summary text-2xl w-fit md:w-96 fixed bottom-22 left-4 md:left-28 text-slate-950 hover:-translate-y-3 hover:transition-all hover:duration-1000 hover:ease-in-out">
         <p>I am a Full Stack Developer with strong foundation in React, Express, tailwind, Node, Mongodb and Python. Eager to apply skills to innovative software solutions</p>
       </div>
     </div>
