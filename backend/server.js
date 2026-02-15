@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 dotenv.config();
 app.use(express.json());
 
-app.use(cors());
+app.use(cors({ origin: "*" }));
 
 conn();
 
@@ -22,15 +22,24 @@ app.post('/contact', async(req, res) => {
  try {
   const {name, email, message} = req.body;
   if(name === "" || email === "" || message === ""){
-    res.status(400).send("Please Filled The Detail");
+    return res.status(400).json({
+      success: false,
+      message: "Please Filled The Detail"
+    });
   }
-  else{
+  
     const detail = new Contact({name, email, message});
     await detail.save();
-    res.status(201).send("Message are send succesfully");
-  }
- } catch (error) {
-  res.status(500).send("Your Message was not send");
+    
+    return res.status(201).json({
+      success: true,
+      message: "Message are send succesfully"
+    });
+  } catch (error) {
+    return res.status(500).json({
+    success: false,
+    message: "Your Message was not send"
+  });
  }
 })
 
