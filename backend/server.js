@@ -1,13 +1,13 @@
 import express from "express";
 import { Contact } from "./models/contact.js";
 import conn from "./config/db.js";
-import dotenv from "dotenv";
 import cors from "cors";
 const app = express()
+import dotenv from "dotenv";
+dotenv.config();
 const port = process.env.PORT || 3000;
 
 
-dotenv.config();
 app.use(express.json());
 
 app.use(cors({ origin: "*" }));
@@ -18,10 +18,10 @@ app.get('/', (req, res) => {
   res.send('Backend Is Running!')
 })
 
-app.post('/contact', async(req, res) => {
+app.post('/api/contact', async(req, res) => {
  try {
   const {name, email, message} = req.body;
-  if(name === "" || email === "" || message === ""){
+  if(!name || !email || !message || name.trim() === "" || email.trim() === "" || message.trim() === ""){
     return res.status(400).json({
       success: false,
       message: "Please Filled The Detail"

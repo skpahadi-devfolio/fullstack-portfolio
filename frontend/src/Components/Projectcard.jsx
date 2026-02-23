@@ -15,7 +15,7 @@ const Projectcard = () => {
 ])
   return (
     
-    <div className='p-4 flex justify-center items-center flex-col gap-5 my-2 md:my-4 cursor-pointer md:min-h-[80vh]'>
+    <div className='p-4 flex justify-center items-center flex-col gap-5 my-10 md:my-4 cursor-pointer md:min-h-[80vh]'>
       
       {project.map(project => {
         return <div key={project.title} className="border-2 w-72 max-w-3xl md:w-full mx-auto flex flex-col rounded-xl bg-violet-600 transition-all hover:-translate-y-6 duration-700 ease-in-out leftRightanimation md:min-h-60 min-h-60 my-3 md:my-0">
