@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   res.send('Backend Is Running!')
 })
 
-app.post('/api/contact', async(req, res) => {
+app.post('/contact', async(req, res) => {
  try {
   const {name, email, message} = req.body;
   if(!name || !email || !message || name.trim() === "" || email.trim() === "" || message.trim() === ""){
