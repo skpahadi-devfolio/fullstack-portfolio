@@ -10,30 +10,31 @@ const Contact = () => {
    const handleClick = async(e) => {
     e.preventDefault()
 
-    try {
-      let a = await fetch('https://fullstack-portfolio-yfzd.onrender.com/contact', {method: "POST",
-        headers: {
-        "Content-Type": "application/json",
-      },
-        body: JSON.stringify(form),
-      });
-      let res = await a.json() 
-      console.log(res)
-
-      if(res.success){
-        alert("Message sent successfuly!");
-        setForm({name: "", email: "", message: ""});
-      }
-      else{
-        alert("Something is not working properly");
-      }
-
-    } catch (error) {
-      console.log(error)
-      alert("Something is wrong Please Try Again");
+    if(form.name === "" || form.email === "" || form.message === ""){
+      alert("Please Filled Empty column");
     }
+    else{
+      alert("Form submmited succefuslly!");
+      setForm({name: "", email: "", message: ""})
+    }
+    const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const raw = JSON.stringify(form);
+
+const requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("https://fullstack-portfolio-yfzd.onrender.com/contact", requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
+
    }
-   
    
 
   
