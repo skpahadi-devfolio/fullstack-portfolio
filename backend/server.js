@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.use(cors({ origin: "*" }));
+app.use(cors());
 
 conn();
 
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 app.post('/contact', async(req, res) => {
  try {
   const {name, email, message} = req.body;
-  if(!name || !email || !message || name.trim() === "" || email.trim() === "" || message.trim() === ""){
+  if(name === "" || email === "" || message === ""){
     return res.status(400).json({
       success: false,
       message: "Please Filled The Detail"
