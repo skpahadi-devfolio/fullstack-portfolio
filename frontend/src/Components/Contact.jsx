@@ -30,7 +30,7 @@ const requestOptions = {
 };
 
 fetch("https://fullstack-portfolio-yfzd.onrender.com/contact", requestOptions)
-  .then((response) => response.text())
+  .then((response) => response.json())
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
 
