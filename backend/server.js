@@ -27,6 +27,7 @@ app.post('/contact', async(req, res) => {
       message: "Please Filled The Detail"
     });
   }
+  console.log(req.body);
   
     const detail = new Contact({name, email, message});
     await detail.save();
