@@ -25,6 +25,8 @@ dist-ssr
 
 
 #alag se kuch try
+.env
+.env_local
 backend/.env
 node_modules
 backend/node_modules
