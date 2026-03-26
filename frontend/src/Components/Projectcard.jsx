@@ -2,33 +2,50 @@ import React, { useState } from 'react'
 
 const Projectcard = () => {
     const [project, setproject] = useState([
-    {
-        title: "Personal Portfolio Website",
-        desc: "Built a modern, responsive portfolio using React and Tailwind CSS Implemented reusable components, clean UI, and smooth layout Showcases skills, projects, and contact information Focused on performance and mobile responsiveness",
-        end: "Tech Stack: React, Tailwind CSS"
-    },
-    {
-        title: "Number Guessing Game",
-        desc: "Developed an interactive number guessing game using HTML, CSS, and JavaScript Implemented game logic, user input handling, and result feedback Improved JavaScript fundamentals and DOM manipulation skills",
-        end: "Tech Stack: HTML, CSS, JavaScript"
-    }
-])
-  return (
-    
-    <div className='p-4 flex justify-center items-center flex-col gap-5 my-10 md:my-4 cursor-pointer md:min-h-[80vh]'>
-      
-      {project.map(project => {
-        return <div key={project.title} className="border-2 w-72 max-w-3xl md:w-full mx-auto flex flex-col rounded-xl bg-violet-600 transition-all hover:-translate-y-6 duration-700 ease-in-out leftRightanimation md:min-h-60 min-h-60 my-3 md:my-0">
+        {
+            title: "Personal Portfolio Website",
+            desc: "Built a modern, responsive portfolio using React and Tailwind CSS Implemented reusable components, clean UI, and smooth layout Showcases skills, projects, and contact information Focused on performance and mobile responsiveness",
+            end: "Tech Stack: React, Tailwind CSS"
+        },
+        {
+            title: "Number Guessing Game",
+            desc: "Developed an interactive number guessing game using HTML, CSS, and JavaScript Implemented game logic, user input handling, and result feedback Improved JavaScript fundamentals and DOM manipulation skills",
+            end: "Tech Stack: HTML, CSS, JavaScript"
+        },
+        {
+            title: "URL Shortener App",
+            desc: "Developed a full-stack URL shortener using Next.js with secure GitHub authentication via NextAuth Implemented features like generating short URLs, redirect handling, and user-specific link management Improved understanding of authentication, API routes, and modern full-stack development",
+            end: "Tech Stack: Next.js, NextAuth, GitHub OAuth"
+        },
+        {
+            title: "KJ&SK Pahadi Rasoi Website",
+            desc: "Designed and developed a responsive restaurant website using HTML, CSS, and JavaScript Created an interactive UI with features like menu display, image gallery, and booking section Built using AI-assisted prompt engineering to enhance design and development speed",
+            end: "Tech Stack: HTML, CSS, JavaScript"
+        },
+        {
+            title: "Note Manager App",
+            desc: "Built a full-stack note management application using the MERN stack Implemented JWT-based authentication for secure user access Developed CRUD functionality for creating, updating, and deleting notes Strengthened backend API development and database handling skills",
+            end: "Tech Stack: MongoDB, Express.js, React.js, Node.js, JWT"
+        }
+    ])
+    return (
 
-           <div className='text-center flex flex-col gap-2 md:gap-10'>
-             <div className="projects font-bold text-lg min-w-5/6 md:w-full bg-amber-500 rounded-lg">{project.title}</div>
-             <div className="projects md:w-3xl text-shadow-2xs">{project.desc}</div>
-              <div className="projects flex md:justify-end justify-center">{project.end}</div>
-           </div>
+        <div className='min-h-screen flex flex-col mb-20'>
+        <div className='p-4 flex justify-center items-center flex-col gap-5 my-10 md:my-4 cursor-pointer'>
+
+            {project.map(project => {
+                return <div key={project.title} className="border-2  max-w-3xl w-[88vw] mx-auto flex flex-col rounded-xl bg-violet-600 transition-all hover:-translate-y-6 duration-700 ease-in-out leftRightanimation  min-h-60 my-3 md:my-0 ">
+
+                    <div className='text-center flex flex-col gap-2 md:gap-10'>
+                        <div className="projects font-bold text-lg min-w-5/6 md:w-full bg-amber-500 rounded-lg">{project.title}</div>
+                        <div className="projects md:w-3xl text-shadow-2xs">{project.desc}</div>
+                        <div className="projects flex md:justify-end justify-center">{project.end}</div>
+                    </div>
+                </div>
+            })}
         </div>
-      })}
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Projectcard

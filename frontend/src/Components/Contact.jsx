@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify'
 const Contact = () => {
 
   const [form, setForm] = useState({name: "", email: "", message: ""})
@@ -12,11 +13,11 @@ const Contact = () => {
     console.log("button clicked")
 
     if(form.name === "" || form.email === "" || form.message === ""){
-      alert("Please Filled Empty column");
+      toast.error("Please Filled Empty column");
       return;
     }
     else{
-      alert("Form submmited succefuslly!");
+      toast.success("Form submmited succefuslly!");
       setForm({name: "", email: "", message: ""})
     }
     const myHeaders = new Headers();
@@ -42,6 +43,19 @@ fetch("https://fullstack-portfolio-yfzd.onrender.com/contact", requestOptions)
   
   return (
    <div>
+
+    <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+/>
   <div className="container mx-auto my-9 md:w-5xl w-full relative py-5 text-white">
 
     {/* TITLE */}
@@ -84,7 +98,7 @@ fetch("https://fullstack-portfolio-yfzd.onrender.com/contact", requestOptions)
       <div className="right md:mx-10 mt-8 md:mt-0">
         <form
           onSubmit={handleClick}
-          className='flex flex-col gap-2 min-w-60 md:mx-8 mx-auto'
+          className='flex flex-col gap-2 w-[95vw] max-w-lg md:mx-8 mx-auto'
         >
           <input
             onChange={handleChange}
@@ -114,7 +128,7 @@ fetch("https://fullstack-portfolio-yfzd.onrender.com/contact", requestOptions)
 
           <button
             type='submit'
-            className='bg-amber-600 md:px-15 md:py-3 md:w-fit w-36 md:mx-auto mx-auto px-10 text-center rounded-4xl'
+            className='bg-amber-600 md:px-15 md:py-3 md:w-fit w-40 md:mx-auto mx-auto px-10 text-center rounded-4xl'
           >
             Send Message
           </button>
