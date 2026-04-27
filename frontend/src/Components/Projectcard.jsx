@@ -5,27 +5,32 @@ const Projectcard = () => {
         {
             title: "Personal Portfolio Website",
             desc: "Built a modern, responsive portfolio using React and Tailwind CSS Implemented reusable components, clean UI, and smooth layout Showcases skills, projects, and contact information Focused on performance and mobile responsiveness",
-            end: "Tech Stack: React, Tailwind CSS"
+            end: "Tech Stack: React, Tailwind CSS",
+            Link: "https://sandeepkohli-fullstack-portfolio-web.netlify.app/"
         },
         {
             title: "Number Guessing Game",
             desc: "Developed an interactive number guessing game using HTML, CSS, and JavaScript Implemented game logic, user input handling, and result feedback Improved JavaScript fundamentals and DOM manipulation skills",
-            end: "Tech Stack: HTML, CSS, JavaScript"
+            end: "Tech Stack: HTML, CSS, JavaScript",
+            Link: "https://skpahadi-devfolio.github.io/number_guessing_first_game/"
         },
         {
             title: "URL Shortener App",
             desc: "Developed a full-stack URL shortener using Next.js with secure GitHub authentication via NextAuth Implemented features like generating short URLs, redirect handling, and user-specific link management Improved understanding of authentication, API routes, and modern full-stack development",
-            end: "Tech Stack: Next.js, NextAuth, GitHub OAuth"
+            end: "Tech Stack: Next.js, NextAuth, GitHub OAuth",
+            Link: "https://bitlinks-five-ebon.vercel.app/"
         },
         {
             title: "KJ&SK Pahadi Rasoi Website",
             desc: "Designed and developed a responsive restaurant website using HTML, CSS, and JavaScript Created an interactive UI with features like menu display, image gallery, and booking section Built using AI-assisted prompt engineering to enhance design and development speed",
-            end: "Tech Stack: HTML, CSS, JavaScript"
+            end: "Tech Stack: HTML, CSS, JavaScript",
+            Link: "https://skpahadi-devfolio.github.io/KJ-SK-Pahadi-Rasoi/"
         },
         {
             title: "Note Manager App",
             desc: "Built a full-stack note management application using the MERN stack Implemented JWT-based authentication for secure user access Developed CRUD functionality for creating, updating, and deleting notes Strengthened backend API development and database handling skills",
-            end: "Tech Stack: MongoDB, Express.js, React.js, Node.js, JWT"
+            end: "Tech Stack: MongoDB, Express.js, React.js, Node.js, JWT",
+            Link: "https://mynotemanager-skweb.netlify.app/"
         }
     ])
     return (
@@ -40,6 +45,7 @@ const Projectcard = () => {
                         <div className="projects font-bold text-lg min-w-5/6 md:w-full bg-amber-500 rounded-lg">{project.title}</div>
                         <div className="projects md:w-3xl text-shadow-2xs">{project.desc}</div>
                         <div className="projects flex md:justify-end justify-center">{project.end}</div>
+                        <div className='bg-gray-950 p-2 text-blue-900'><a href={project.Link} target='_blank'>View Project</a></div>
                     </div>
                 </div>
             })}
